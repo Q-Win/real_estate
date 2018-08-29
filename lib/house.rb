@@ -13,10 +13,9 @@ class House
     @rooms << room
   end
 
-  def rooms_from_category(room)
+  def rooms_from_category(catagory)
     @rooms.select do |room|
-      room.catagory
-      binding.pry
+      room.catagory == catagory
     end
   end
 
