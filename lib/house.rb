@@ -19,4 +19,25 @@ class House
     end
   end
 
+  def area
+    sum = 0
+    @rooms.each do |room|
+      sum += room.area
+    end
+    sum
+    # @rooms.inject(0,:+)
+  end
+
+  def price_per_square_foot
+    (@price[1..-1].to_f / area).round(2)
+  end
+
+  def rooms_sorted_by_area
+    @rooms.sort_by do |room|
+      room.area
+    end.reverse
+  end
+
+
+
 end
