@@ -25,7 +25,6 @@ class House
       sum += room.area
     end
     sum
-    # @rooms.inject(0,:+)
   end
 
   def price_per_square_foot
